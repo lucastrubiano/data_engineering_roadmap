@@ -173,4 +173,7 @@ cython_debug/
 *.code-workspace
 .DS_Store
 
+# My Ignored Files
+*.tar
+
 docker-volume/
