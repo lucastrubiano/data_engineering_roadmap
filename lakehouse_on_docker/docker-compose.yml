@@ -111,12 +111,7 @@ services:
     volumes:
       - ./pyspark:/home/jovyan/work
       - spark-jupyter-data:/home/jovyan/.local
-    entrypoint: ["/bin/bash", "-c"]
-    command:
-      - |
-        chown -R 1000:1000 /home/jovyan/.local 2>/dev/null || true
-        chown -R 1000:1000 /home/jovyan/work 2>/dev/null || true
-        exec /usr/local/bin/start-notebook.sh
+    command: start-notebook.py --NotebookApp.token='' --NotebookApp.password=''
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888/api"]
       interval: 30s
