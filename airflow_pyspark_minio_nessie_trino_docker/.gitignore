@@ -1,0 +1,20 @@
+# Variables de entorno
+.env
+
+# Logs de Airflow
+airflow/logs/*
+!airflow/logs/.gitkeep
+
+# Archivos temporales
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración local
+*.local
+
+# Volúmenes de Docker (si se montan localmente)
+data/
+volumes/
+
